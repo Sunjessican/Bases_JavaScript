@@ -7,17 +7,19 @@
     <title>Base JavaScript</title>
 
     <script>
-      const year = 2023;
-      const birthyear = prompt("Quel est votre année de naissance ?");
-
-      const age = year - birthyear;
-
-      if (age <= 13) {
-        console.log("je vous suggère de regarder Lilo et Stitch");
-      } else if (age < 18) {
-        console.log("je vous suggère de regarder Matrix");
+      const a = prompt("Choisissez un premier nombre");
+      const b = prompt("Choisissez un deuxième nombre");
+      const c = a * b;
+      let signe;
+      if (isNaN(c)) {
+        console.log("opération impossible");
       } else {
-        console.log("je vous suggère de regarder Evil Dead");
+        if (c < 0) {
+          signe = "négatif";
+        } else {
+          signe = "positif";
+        }
+        console.log(`${a} * ${b}= ${c} et est un nombre ${signe}`);
       }
     </script>
   </head>
