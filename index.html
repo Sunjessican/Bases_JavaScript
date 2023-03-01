@@ -7,16 +7,17 @@
     <title>Base JavaScript</title>
 
     <script>
-      const chiffre = prompt("entrer un chiffre entre 0 et 9");
-      if (chiffre > 0 && chiffre < 10) {
-        let i = 0;
-        while (i <= chiffre) {
-          console.log(chiffre - i);
-          i++;
+      let guess = 8;
+      let chiffre;
+      while (chiffre !== guess) {
+        chiffre = prompt("Devinez le chiffre") * 1;
+        if (chiffre < guess) {
+          console.log("plus");
+        } else if (chiffre > guess) {
+          console.log("moins");
         }
-      } else {
-        console.log("le chiffre entré n'est pas entre 0 et 9");
       }
+      console.log("Bravo");
     </script>
   </head>
   <body></body>
