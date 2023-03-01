@@ -7,19 +7,15 @@
     <title>Base JavaScript</title>
 
     <script>
-      const a = prompt("Choisissez un premier nombre");
-      const b = prompt("Choisissez un deuxième nombre");
-      const c = a * b;
-      let signe;
-      if (isNaN(c)) {
-        console.log("opération impossible");
-      } else {
-        if (c < 0) {
-          signe = "négatif";
-        } else {
-          signe = "positif";
+      const chiffre = prompt("entrer un chiffre entre 0 et 9");
+      if (chiffre > 0 && chiffre < 10) {
+        let i = 0;
+        while (i <= chiffre) {
+          console.log(chiffre - i);
+          i++;
         }
-        console.log(`${a} * ${b}= ${c} et est un nombre ${signe}`);
+      } else {
+        console.log("le chiffre entré n'est pas entre 0 et 9");
       }
     </script>
   </head>
